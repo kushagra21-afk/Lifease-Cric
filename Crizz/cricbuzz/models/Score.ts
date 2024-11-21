@@ -69,7 +69,7 @@ const scoreSchema = new Schema<ScoreDocument>({
   },
   deliveries: [
     {
-      type: { type: String, enum: ['normal', 'wide', 'no-ball', 'bye', 'legbye', 'overthrow', 'wicket'], required: true },
+      type: { type: String, enum: ['normal', 'wide', 'noball', 'bye', 'legbye', 'overthrow', 'wicket'], required: true },
       runs: { type: Number, required: true },
       extras: { type: String },
       bowler: { type: String, required: true },
