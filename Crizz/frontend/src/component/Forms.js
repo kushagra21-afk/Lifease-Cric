@@ -8,13 +8,12 @@ const CommentaryButton = () => {
   const [deliveryType, setDeliveryType] = useState(null);
   const [runScored, setRunScored] = useState(null);
 
-  // Handles the submission of a new ball
   const handleNewBall = async () => {
     try {
-      const matchId = match123;
+      // const matchId = "match123";
 
       const deliveryData = {
-        matchId,
+        matchId: match123,
         type: deliveryType || "normal",
         runs: runScored ?? 0, // Default runs to 0 if none selected
         extras: 0, // Placeholder for extras data
