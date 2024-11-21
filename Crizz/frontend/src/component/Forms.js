@@ -25,7 +25,7 @@ const CommentaryButton = () => {
       console.log("Payload sent to server:", deliveryData);
 
       const response = await axios.post(
-        "http://localhost:5000/api/scoring/delivery",
+        "https://lifease-cric-1.onrender.com/api/scoring/delivery",
         deliveryData
       );
 
