@@ -13,6 +13,7 @@ const CommentaryButton = () => {
       // const matchId = "match123";
 
       const deliveryData = {
+        teamName: "Delhi",
         matchId: "match123",
         type: deliveryType || "normal",
         runs: runScored ?? 0, // Default runs to 0 if none selected
