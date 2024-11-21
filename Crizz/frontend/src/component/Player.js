@@ -1,5 +1,6 @@
 import React from "react";
-
+const overs = Math.floor(PlayerScorecard.bowlerStats / 6);
+const ballsInCurrentOver = PlayerScorecard.bowlerStats % 6;
 const PlayerScorecard = ({ batsmanStats, bowlerStats }) => {
   return (
     <div className="max-w-lg mt-6 mx-auto bg-[#c4e5c3] shadow-sm rounded-md p-4">
@@ -59,7 +60,7 @@ const PlayerScorecard = ({ batsmanStats, bowlerStats }) => {
             >
               <span>{bowler.name}</span>
               <span>{bowler.runsConceded}</span>
-              <span>{bowler.overs}</span>
+              <span>{overs}.{ballsInCurrentOver}</span>
               <span>{bowler.maidens}</span>
               <span>{bowler.wickets}</span>
             </div>
