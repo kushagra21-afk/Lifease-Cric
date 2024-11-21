@@ -6,6 +6,8 @@ RUN THE PROJECT LOCALLY ON YOUR SYSTEM
 ----> /api/scoring/match/:id (get)
 ---->/api/scoring/delivery (post)**
 
+**_REFER TO payload.json for dummy data for the post request_**
+
 DOCKER FILE HAS BEEN INCLUDED IF YOU WANT TO RUN IT ON DOCKER
 ----> DOCKER BUILD -T MY-CRIC-APP .
 ----> DOCKER RUN --NAME CRICKET-APP -D -P 5000:5000 MY-CRIC-APP
