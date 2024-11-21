@@ -85,7 +85,7 @@ export const addDelivery = async (req: Request, res: Response): Promise<void> =>
         match.teamStats.extras.legByes += runs; 
         match.teamStats.totalRuns += runs;   
         break;
-      case 'legbye':
+      case 'bye':
         match.teamStats.extras.legByes += runs; 
         match.teamStats.totalRuns += runs;     
         break;
