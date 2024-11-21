@@ -5,12 +5,12 @@ WORKDIR /
 
 COPY package*.json ./
 
-RUN npm install && npm build
-
-RUN npm start
+RUN npm install 
 
 COPY . .
 
+RUN npm run build 
+
 EXPOSE 5000
 
-CMD ["node", "dist/app.js"] #app1.js for redis integration
+CMD ["npm", "start"] #start1 for redis integration
