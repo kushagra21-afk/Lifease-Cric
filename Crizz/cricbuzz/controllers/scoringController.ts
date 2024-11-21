@@ -83,11 +83,17 @@ export const addDelivery = async (req: Request, res: Response): Promise<void> =>
       //   break;
       case 'leg bye':
         match.teamStats.extras.legByes += runs; 
-        match.teamStats.totalRuns += runs;   
+        match.teamStats.totalRuns += runs; 
+        batsmanStats.balls += 1;
+        match.teamStats.legalBalls += 1;
+        bowlerStats.balls += 1;
         break;
       case 'bye':
         match.teamStats.extras.legByes += runs; 
-        match.teamStats.totalRuns += runs;     
+        match.teamStats.totalRuns += runs;
+        batsmanStats.balls += 1;
+        match.teamStats.legalBalls += 1;
+        bowlerStats.balls += 1;
         break;
 
 
@@ -95,6 +101,8 @@ export const addDelivery = async (req: Request, res: Response): Promise<void> =>
         batsmanStats.runs += runs;
         bowlerStats.runsConceded += runs;
         match.teamStats.totalRuns += runs;
+        batsmanStats.balls += 1;
+        bowlerStats.balls += 1;
         break;
 
       case 'wicket':
@@ -111,6 +119,7 @@ export const addDelivery = async (req: Request, res: Response): Promise<void> =>
         bowlerStats.runsConceded += runs;
         match.teamStats.legalBalls += 1;
         match.teamStats.totalRuns += runs;
+        bowlerStats.balls += 1;
         break;
     }
 
