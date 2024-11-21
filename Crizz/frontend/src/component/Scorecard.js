@@ -48,7 +48,7 @@ const ShowScorecard = () => {
         <div className="grid grid-cols-2 gap-2 mb-3">
           <div>
             <h3 className="text-base font-medium">Team Name:</h3>
-            <p className="text-gray-700 text-sm">{scorecard.teamName}</p>
+            <p className="text-gray-700 text-sm">{scorecard.teamStats.teamName}</p>
           </div>
           <div>
             <h3 className="text-base font-medium">Runs:</h3>
