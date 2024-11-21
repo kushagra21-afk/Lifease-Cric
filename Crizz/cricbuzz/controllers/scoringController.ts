@@ -75,12 +75,21 @@ export const addDelivery = async (req: Request, res: Response): Promise<void> =>
         match.teamStats.totalRuns += runs+1;
         break;
 
-      case 'legbye+overthrow':
-      case 'bye+overthrow':
-        const extraType = type === 'legbye+overthrow' ? 'legByes' : 'byes';
-        match.teamStats.extras[extraType] += runs;
-        match.teamStats.totalRuns += runs;
+      // case 'legbye+overthrow':
+      // case 'bye+overthrow':
+      //   const extraType = type === 'legbye+overthrow' ? 'legByes' : 'byes';
+      //   match.teamStats.extras[extraType] += runs;
+      //   match.teamStats.totalRuns += runs;
+      //   break;
+      case 'legbye':
+        match.teamStats.extras.legByes += runs; 
+        match.teamStats.totalRuns += runs;   
         break;
+      case 'legbye':
+        match.teamStats.extras.legByes += runs; 
+        match.teamStats.totalRuns += runs;     
+        break;
+
 
       case 'runs+overthrow':
         batsmanStats.runs += runs;
