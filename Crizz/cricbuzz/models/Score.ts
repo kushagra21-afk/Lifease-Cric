@@ -1,6 +1,5 @@
 import mongoose, { Document, Schema } from 'mongoose';
 
-// Define TypeScript interfaces for the schema
 interface BatsmanStats {
   name: string;
   runs: number;
@@ -37,7 +36,6 @@ interface Delivery {
   batsman: string;
 }
 
-// Define the main interface for the Score document
 export interface ScoreDocument extends Document {
   matchId: string;
   batsmanStats: BatsmanStats[];
@@ -69,7 +67,7 @@ const scoreSchema = new Schema<ScoreDocument>({
   },
   deliveries: [
     {
-      type: { type: String, enum: ['normal', 'wide', 'noball', 'bye', 'legbye', 'overthrow', 'wicket'], required: true },
+      type: { type: String, enum: ['normal', 'wide', 'noball', 'bye', 'leg bye', 'overthrow', 'wicket'], required: true },
       runs: { type: Number, required: true },
       extras: { type: String },
       bowler: { type: String, required: true },
