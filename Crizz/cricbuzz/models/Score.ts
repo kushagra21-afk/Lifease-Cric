@@ -55,6 +55,7 @@ const scoreSchema = new Schema<ScoreDocument>({
     default: [],
   },
   teamStats: {
+    teamName: {type: String},
     totalRuns: { type: Number, default: 0 },
     totalWickets: { type: Number, default: 0 },
     legalBalls: { type: Number, default: 0 },
