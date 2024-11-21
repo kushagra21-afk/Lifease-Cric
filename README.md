@@ -19,8 +19,7 @@ My Cric App is a cricket scoring API designed to handle match scoring and delive
   - [POST /api/scoring/delivery](#post-apiscoringdelivery)
 - [Testing](#testing)
 - [Default Ports](#default-ports)
-- [Contributing](#contributing)
-- [License](#license)
+
 
 ---
 
@@ -147,22 +146,10 @@ Before you set up the project, ensure you have the following installed:
 
 - **Description**: Retrieves match scoring details for the given `id`.
 - **Request Example**:
+  
   ```bash
   curl http://localhost:5000/api/scoring/match/123
   ```
-- **Response Example**:
-  ```json
-  {
-    "matchId": 123,
-    "team1": "Team A",
-    "team2": "Team B",
-    "score": {
-      "team1": 250,
-      "team2": 200
-    }
-  }
-  ```
-
 ---
 
 ### **POST /api/scoring/delivery**
@@ -217,40 +204,6 @@ Before you set up the project, ensure you have the following installed:
 
 - **Application**: `5000`
 - **Redis**: `6379`
-
----
-
-## **Contributing**
-
-Contributions are welcome! To contribute:
-
-1. Fork the repository:
-   ```bash
-   git clone https://github.com/your-repo/my-cric-app.git
-   ```
-
-2. Create a feature branch:
-   ```bash
-   git checkout -b feature-name
-   ```
-
-3. Commit your changes:
-   ```bash
-   git commit -m "Add feature: feature-name"
-   ```
-
-4. Push to your branch:
-   ```bash
-   git push origin feature-name
-   ```
-
-5. Open a pull request on the main repository.
-
----
-
-## **License**
-
-This project is licensed under the [MIT License](LICENSE). Feel free to use, modify, and distribute it.
 
 ---
 
