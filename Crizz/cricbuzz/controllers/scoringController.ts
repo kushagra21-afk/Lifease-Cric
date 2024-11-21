@@ -46,9 +46,9 @@ export const addDelivery = async (req: Request, res: Response): Promise<void> =>
     // Update stats based on delivery type
     switch (type) {
       case 'wide':
-        bowlerStats.runsConceded += runs;
-        match.teamStats.extras.wides += runs;
-        match.teamStats.totalRuns += runs;
+        bowlerStats.runsConceded += runs+1;
+        match.teamStats.extras.wides += runs+1;
+        match.teamStats.totalRuns += runs+1;
         break;
 
       case 'noball+bye':
@@ -60,19 +60,19 @@ export const addDelivery = async (req: Request, res: Response): Promise<void> =>
         break;
 
       case 'noball':
-        bowlerStats.runsConceded += runs;
+        bowlerStats.runsConceded += runs+1;
         batsmanStats.balls += 1;
-        batsmanStats.runs += runs - 1;
+        batsmanStats.runs += runs;
         match.teamStats.extras.noBalls += 1;
-        match.teamStats.totalRuns += runs;
+        match.teamStats.totalRuns += runs+1;
         break;
 
       case 'noball+legbye':
         bowlerStats.runsConceded += 1;
         batsmanStats.balls += 1;
         match.teamStats.extras.noBalls += 1;
-        match.teamStats.extras.legByes += runs - 1;
-        match.teamStats.totalRuns += runs;
+        match.teamStats.extras.legByes += runs;
+        match.teamStats.totalRuns += runs+1;
         break;
 
       case 'legbye+overthrow':
