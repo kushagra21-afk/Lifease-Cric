@@ -11,7 +11,7 @@ const ShowScorecard = () => {
     const fetchScorecard = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/scoring/match/match123"
+          "https://lifease-cric-1.onrender.com/api/scoring/match/match123"
         );
         setScorecard(response.data.match);
         setLoading(false);
