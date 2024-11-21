@@ -59,7 +59,7 @@ export const addDelivery = async (req: Request, res: Response): Promise<void> =>
         match.teamStats.totalRuns += runs;
         break;
 
-      case 'noball+runs':
+      case 'noball':
         bowlerStats.runsConceded += runs;
         batsmanStats.balls += 1;
         batsmanStats.runs += runs - 1;
