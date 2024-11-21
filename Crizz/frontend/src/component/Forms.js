@@ -30,10 +30,12 @@ const CommentaryButton = () => {
 
       if (response.data.success) {
         console.log("Delivery added successfully:", response.data.match);
-        setCurrentStriker("");
-        setNonStriker("");
-        setDeliveryType(null);
-        setRunScored(null);
+
+        // Auto reload after 1 second
+        setTimeout(() => {
+          console.log("Reloading the page after 1 second...");
+          window.location.reload(); // Full page reload
+        }, 1000);
       } else {
         console.error("Failed to add delivery:", response.data);
       }
