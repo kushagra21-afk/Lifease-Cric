@@ -3,7 +3,7 @@ import Score from '../models/Score';
 
 // Add a delivery to the match
 export const addDelivery = async (req: Request, res: Response): Promise<void> => {
-  const { matchId, type, runs, extras, bowler, batsman } = req.body;
+  const { matchId, type, runs, extras, bowler, batsman, teamName } = req.body;
 
   try {
     // Find or initialize the match
@@ -15,6 +15,7 @@ export const addDelivery = async (req: Request, res: Response): Promise<void> =>
         batsmanStats: [],
         deliveries: [],
         teamStats: {
+          teamName: teamName,
           totalRuns: 0,
           totalWickets: 0,
           legalBalls: 0,
