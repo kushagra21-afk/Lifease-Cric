@@ -89,7 +89,7 @@ export const addDelivery = async (req: Request, res: Response): Promise<void> =>
         bowlerStats.balls += 1;
         break;
       case 'bye':
-        match.teamStats.extras.legByes += runs; 
+        match.teamStats.extras.byes += runs; 
         match.teamStats.totalRuns += runs;
         batsmanStats.balls += 1;
         match.teamStats.legalBalls += 1;
