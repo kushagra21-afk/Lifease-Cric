@@ -61,7 +61,7 @@ const PlayerScorecard = ({ batsmanStats, bowlerStats }) => {
             >
               <span>{bowler.name}</span>
               <span>{bowler.runsConceded}</span>
-              <span>{overs}.{ballsInCurrentOver}</span>
+              <span>{Math.floor(bowlerStats.balls / 6)}.{bowler.balls % 6}</span>
               <span>{bowler.maidens}</span>
               <span>{bowler.wickets}</span>
             </div>
