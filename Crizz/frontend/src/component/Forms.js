@@ -113,7 +113,7 @@ const CommentaryButton = () => {
 
       {/* Extra Delivery Buttons */}
       <div className="grid grid-cols-5 gap-3 mb-8">
-        {["Wicket", "Wide", "No Ball", "Leg Bye", "Bye"].map((type) => (
+        {["Wicket", "Wide", "noball", "Leg Bye", "Bye"].map((type) => (
           <button
             key={type}
             onClick={() => handleDeliveryTypeClick(type)}
