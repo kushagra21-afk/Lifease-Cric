@@ -17,7 +17,7 @@ const CommentaryButton = () => {
         matchId,
         type: deliveryType || "normal",
         runs: runScored ?? 0, // Default runs to 0 if none selected
-        extras: {}, // Placeholder for extras data
+        extras: 0, // Placeholder for extras data
         bowler: "bowlerName", // Replace with actual bowler input if needed
         batsman: currentStriker,
       };
