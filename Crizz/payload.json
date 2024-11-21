@@ -1,0 +1,8 @@
+{
+  "matchId": "match123",       
+  "type": "normal",             
+  "runs": 4,                   
+  "extras": 0,                  
+  "bowler": "Bowler 1",  
+  "batsman": "Batsman 1"        
+}
