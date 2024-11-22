@@ -90,6 +90,7 @@ Before you set up the project, ensure you have the following installed:
    ```
    http://localhost:5000
    ```
+(Remember to change the axios api request in frontend while running the project locally)
 
 ---
 
